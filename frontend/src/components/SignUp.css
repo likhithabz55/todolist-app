@@ -1,0 +1,98 @@
+
+.container {
+    display : flex;
+    flex-direction: column;
+    margin : auto;
+    margin-left : 30px;
+    margin-top : 130px;
+    margin-bottom : 150px;
+    background-image: url('../assets/nature.jpg');
+    background : transparent;
+    padding-bottom: 10px;
+    width : 500px;
+    align-items: center;
+}
+
+.header {
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    gap : 10px;
+    width : 100%;
+    margin-top : 70px;
+}
+
+.text {
+    color : color-mix(in srgb,brown 70%,pink);
+    font-size : 50px;
+    font-weight : 700;
+}
+
+.form {
+    margin-top : 55px;
+    display : flex;
+    flex-direction: column;
+    gap : 25px;
+}
+.inputs {
+    margin-top : 55px;
+    display : flex;
+    flex-direction: column;
+    gap : 25px;
+}
+
+.input {
+    display : flex;
+    align-items: center;
+    margin : auto;
+    width : 400px;
+    height : 50px;
+    background : beige;
+    border-radius : 6px;
+}
+
+.input img {
+    margin : 0px 30px;
+}
+
+.input input {
+    height : 50px;
+    width : 400px;
+    background : transparent;
+    border : none;
+    color : black;
+    font-size : 18px;
+}
+
+
+.submit-container {
+    display : flex;
+    margin : 60px auto;
+    gap : 30px;
+}
+
+.submit {
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    width : 180px;
+    height : 50px;
+    color : white;
+    background : color-mix(in srgb,brown 70%,pink);;
+    border-radius : 50px;
+    font-size : 20px;
+    font-weight : 700;
+    cursor: pointer;
+    align-self: center;
+    margin-top : 45px;
+    margin-left : 100px;
+}
+
+.other {
+    background : transparent;
+}
+
+
+
+
+

@@ -1,0 +1,57 @@
+.task-container {
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    margin : auto;
+    margin-left : 200px;
+    margin-bottom : 500px;
+    background : transparent;
+    padding-bottom: 10px;
+    width : 1000px;
+    align-items: center;
+}
+
+.task-form {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping when there's not enough space */
+    gap: 20px; /* Space between elements */
+    max-width: 1000px; /* Prevent the form from becoming too wide */
+    width: 100%;
+    justify-content: center; /* Ensure the form items are left-aligned */
+}
+
+.task-inputs {
+    margin-top : 5px;
+    display : flex;
+    flex-direction: row;
+    gap : 25px;
+}
+.input-group {
+    display: flex;
+    flex-direction: row; /* Stack label and input vertically */
+    align-items: flex-start;
+}
+
+.task-inputs[type = "text"] {
+    padding: 8px 12px;
+    margin-top: 5px; /* Add some space between label and input */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 300px;
+}
+
+/* Styling for the AddTask button */
+.view-task-button {
+    position: absolute;
+    top: 30px;  /* Distance from the top */
+    right: 30px;  /* Distance from the right */
+    padding: 10px 20px;
+    background-color: color-mix(in srgb,brown 70%,pink);;;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 700;
+}

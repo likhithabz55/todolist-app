@@ -1,0 +1,128 @@
+.parent-container {
+    display: grid;
+    grid-template-columns: 1fr 120px; /* Table takes remaining space, filter is 200px */
+    gap: 20px; /* Adds space between table and filter */
+}
+.view-container {
+    display: flex;
+    margin-left : 450px;
+    margin-bottom : 50px;
+    margin-top : 5px;
+    background-color: pink;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.task-table {
+    width: 100%;           /* Table takes up 80% of the container's width */
+    height: 100%;
+    border-collapse: collapse;  /* Collapsing borders between table cells */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds shadow for a clean look */
+}
+
+/* Header styling */
+.task-table thead {
+    background-color: color-mix(in srgb,brown 70%,pink); /* Green background for header */
+    color: white;  /* White text color */
+}
+
+.task-table th {
+    padding: 12px 20px;   /* Padding around header text */
+    text-align: left;      /* Left-align the header text */
+    border: 1px solid #ddd;  /* Light border for header cells */
+}
+
+/* Body styling for rows */
+.task-table tbody td {
+    padding: 12px 20px; /* Padding inside each cell */
+    text-align: left;    /* Left-align the content */
+    border: 1px solid #ddd;  /* Light border around each row */
+}
+
+/* Alternate row coloring for better readability */
+.task-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;  /* Light gray background for even rows */
+}
+
+.task-table tbody tr:hover {
+    background-color: #f1f1f1;  /* Slightly darker gray on row hover */
+}
+
+/* No tasks message */
+p {
+    font-size: 1.2rem;
+    color: #555;  /* Dark gray color for text */
+    text-align: center;  /* Center the text */
+}
+/* Styling for the AddTask button */
+.add-task-button {
+    position: absolute;
+    top: 30px;  /* Distance from the top */
+    right: 30px;  /* Distance from the right */
+    padding: 10px 20px;
+    background-color: color-mix(in srgb,brown 70%,pink);;;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.filter-container {
+    width: 120px;
+    /*padding: 15px;*/
+    margin-top : 5px;
+
+    background-color: transparent;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height : 15px;
+}
+.filter-container select {
+    width: 100%; /* Full width of the container */
+    /* Full height of the container */
+    background-color: color-mix(in srgb,brown 70%,pink);;
+    padding: 5px;
+    padding-left : 10px;
+    font-size: 16px;
+    font-color : black;
+    font-weight : 500;
+
+}
+
+.edit-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure modal appears above other content */
+}
+
+/* Modal content container */
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px; /* Adjust width as needed */
+    max-width: 90%; /* Responsive design */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Title styling */
+.modal-content h3 {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+
+
+
+

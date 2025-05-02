@@ -1,0 +1,63 @@
+services:
+  user-service:
+    container_name: user-service
+    build: ./user-service
+    image: todolist-app/user-service
+    ports:
+      - "8081:8081"
+    depends_on:
+      db :
+        condition: service_healthy
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/todo
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: postgres
+    restart: always
+
+  taskview-service:
+    container_name: taskview-service
+    build: ./taskview-service
+    image: todolist-app/taskview-service
+    ports:
+      - "8082:8082"
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/todo
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: postgres
+    restart: always
+
+  frontend :
+    container_name: frontend
+    build: ./frontend
+    image: todolist-app/frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - user-service
+      - taskview-service
+    restart:
+      always
+
+
+  db:
+    image: postgres:16
+    container_name: postgresdb
+    environment:
+      POSTGRES_DB: todo
+      POSTGRES_USERNAME: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5433:5432"             #Local::Host
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_data:
