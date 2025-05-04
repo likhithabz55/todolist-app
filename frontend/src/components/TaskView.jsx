@@ -24,7 +24,7 @@ function TaskView() {
         if (username) {
             console.log(process.env.REACT_APP_TASK_SERVICE_URL);
             console.log("username : ", username)
-            const response = await axios.get(`${process.env.REACT_APP_TASK_SERVICE_URL}/viewTasks`, {
+            const response = await axios.get(`${process.env.REACT_APP_TASK_SERVICE_URL}/tasks/viewTasks`, {
                 params: {username: username}
             })
                 .then((response) => {
@@ -40,7 +40,7 @@ function TaskView() {
 
     // Fetch tasks based on a specific status
     const fetchFilteredTasks = (status,username) => {
-        axios.get(`${process.env.REACT_APP_TASK_SERVICE_URL}/viewTasks`, {
+        axios.get(`${process.env.REACT_APP_TASK_SERVICE_URL}/tasks/viewTasks`, {
             params: {
                 username: username,
                 status: status
@@ -107,7 +107,7 @@ function TaskView() {
            console.log(updatedTask.taskname);
            console.log(updatedTask.deadline);
            console.log(updatedTask.status);
-           axios.post(`${process.env.REACT_APP_TASK_SERVICE_URL}/updateTask`, {
+           axios.post(`${process.env.REACT_APP_TASK_SERVICE_URL}/tasks/updateTask`, {
                username: username,
                taskname : updatedTask.taskname,
                deadline : updatedTask.deadline,

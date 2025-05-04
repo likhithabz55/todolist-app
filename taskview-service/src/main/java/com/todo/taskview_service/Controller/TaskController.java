@@ -20,12 +20,12 @@ public class TaskController {
     @Autowired
     TaskService taskService;
 
-    @PostMapping(path = "/addTask")
+    @PostMapping(path = "/tasks/addTask")
     public String addTask(@RequestBody Task task) {
         return taskService.createNewTask(task);
     }
 
-    @PostMapping(path = "/updateTask")
+    @PostMapping(path = "/tasks/updateTask")
     public String updateTask(@RequestBody Task task) {
         try {
             System.out.println("task received : " + task.getUsername() );
@@ -37,7 +37,7 @@ public class TaskController {
         }
     }
 
-    @GetMapping(path = "/viewTasks")
+    @GetMapping(path = "/tasks/viewTasks")
     public ResponseEntity<List<Task>> getIncompleteTasks(@RequestParam String username,
                                                          @RequestParam(required = false) String status) {
          List<Task> tasks;

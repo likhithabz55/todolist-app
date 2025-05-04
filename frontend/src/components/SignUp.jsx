@@ -21,7 +21,7 @@ function SignUp() {
 
             // const url = await a/zxios.post('http://localhost:8080/signup', {username, password});
             console.log(password,username,email);
-            axios.post(`${process.env.REACT_APP_USER_SERVICE_URL}/signup`, {username, password, email})
+            axios.post(`${process.env.REACT_APP_USER_SERVICE_URL}/users/signup`, {username, password, email})
                 .then((res)=>{
                     console.log(res);
                     setMessage("Successfully Registered");

@@ -14,13 +14,13 @@ public class UserController {
     @Autowired
     UserService userService;
 
-    @PostMapping(path = "/signup")
+    @PostMapping(path = "/users/signup")
     //@PostMapping
     public String registerUser(@RequestBody User user) {
         return userService.addUser(user);
     }
 
-    @PostMapping(path="/login")
+    @PostMapping(path="/users/login")
     //@PostMapping
     public String login(@RequestBody LoginRequest loginRequest) {
         return userService.isAuthenticated(loginRequest);
