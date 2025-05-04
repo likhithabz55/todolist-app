@@ -41,11 +41,11 @@ services:
     restart:
       always
 
-  nginx:
+  proxy-service:
     image: nginx:alpine
     container_name: nginx
     ports:
-      - "80:80"
+      - "9999:80"
     depends_on:
       - frontend
       - user-service
