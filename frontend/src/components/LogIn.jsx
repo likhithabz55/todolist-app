@@ -25,7 +25,8 @@ function LogIn({ onLogin }) {
     const handleSubmit = async (event) => {
         event.preventDefault();
         console.log(process.env.REACT_APP_USER_SERVICE_URL)
-        axios.post(`${process.env.REACT_APP_USER_SERVICE_URL}/login`, {username, password})
+        //axios.post(`${process.env.REACT_APP_USER_SERVICE_URL}/login`, {username, password})
+        axios.post(`http://localhost/users/login`, {username, password})
             .then((res)=>{
                     console.log(res.data);
                     console.log()

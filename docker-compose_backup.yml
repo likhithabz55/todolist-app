@@ -38,20 +38,11 @@ services:
     depends_on:
       - user-service
       - taskview-service
+    environment:
+      REACT_APP_USER_SERVICE_URL: "http://localhost:8081"
+      REACT_APP_TASK_SERVICE_URL: "http://localhost:8082"
     restart:
       always
-
-  nginx:
-    image: nginx:alpine
-    container_name: nginx
-    ports:
-      - "80:80"
-    depends_on:
-      - frontend
-      - user-service
-      - taskview-service
-    volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf:ro    
 
 
   db:
