@@ -24,17 +24,17 @@ function LogIn({ onLogin }) {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        axios.post(`${process.env.REACT_APP_USER_SERVICE_URL}/users/login`, {username, password})
+        console.log(process.env.REACT_APP_USER_SERVICE_URL)
+        axios.post(`${process.env.REACT_APP_USER_SERVICE_URL}/login`, {username, password})
             .then((res)=>{
                     console.log(res.data);
+                    console.log()
                     setMessage(res.data);
                     if( res.data == "User Authenticated" )
                     {
                         onLogin(username);//added for App
                         setTimeout(()=> {
                         navigate("/TaskView", {state : username});}, 100);
-                        //navigate(`/TaskView?username=${username}`);}, 100);
-                        //navigate("/TaskView", {state : username});}, 100);
                     }
             })
             .catch((err)=>{

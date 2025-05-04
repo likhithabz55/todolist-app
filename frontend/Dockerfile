@@ -16,6 +16,8 @@ FROM node:18-alpine
 WORKDIR /frontend
 RUN npm install -g serve
 
+ENV REACT_APP_USER_SERVICE_URL=$REACT_APP_USER_SERVICE_URL
+ENV REACT_APP_TASK_SERVICE_URL=$REACT_APP_TASK_SERVICE_URL
 # Copy built assets from builder
 COPY --from=builder /frontend/build ./build
 
