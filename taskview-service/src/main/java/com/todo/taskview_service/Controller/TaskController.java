@@ -15,6 +15,7 @@ import java.util.List;
 import static org.springframework.data.util.TypeUtils.type;
 
 @RestController
+@RequestMapping("/tasks")
 public class TaskController {
 
     @Autowired
