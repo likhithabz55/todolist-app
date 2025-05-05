@@ -6,7 +6,7 @@ import { useState } from 'react'
 //import viteLogo from '/vite.svg'
 import './App.css'
 import nature from './assets/nature-02.jpg'
-
+//testing with new bg image
 import {
     BrowserRouter as Router,
     Routes,
