@@ -5,7 +5,7 @@ import { useState } from 'react'
 //import reactLogo from './assets/react.svg'
 //import viteLogo from '/vite.svg'
 import './App.css'
-import nature from './assets/nature.jpg'
+import nature from './assets/nature-01.jpg'
 
 import {
     BrowserRouter as Router,
@@ -18,6 +18,7 @@ import LogIn from './components/LogIn.jsx'
 import SignUp from './components/SignUp.jsx'
 import Task from './components/Task.jsx'
 import TaskView from './components/TaskView.jsx'
+
 
 function App() {
 

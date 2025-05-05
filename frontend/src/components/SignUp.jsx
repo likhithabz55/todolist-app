@@ -20,7 +20,7 @@ function SignUp() {
         event.preventDefault();
 
             console.log(password,username,email);
-            axios.post(`http://proxy-service/users/signup`, {username, password, email})    
+            axios.post(`/users/signup`, {username, password, email})    
                 .then((res)=>{
                     console.log(res);
                     setMessage("Successfully Registered");

@@ -48,8 +48,7 @@ function Task() {
             console.log(status);
             console.log(newTask);
             console.log(username);
-            //axios.post(`${process.env.REACT_APP_TASK_SERVICE_URL}/addTask`, {username, taskname : taskname.trim(), deadline : formattedDeadline, status})
-            axios.post(`http://proxy-service/tasks/addTask`, {username, taskname : taskname.trim(), deadline : formattedDeadline, status})
+            axios.post(`/tasks/addTask`, {username, taskname : taskname.trim(), deadline : formattedDeadline, status})
                 .then((res) => {
                     console.log(res.data);
                     setMessage(res.data);

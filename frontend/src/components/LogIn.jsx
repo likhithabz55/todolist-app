@@ -6,7 +6,7 @@ import './LogIn.css'
 import axios from 'axios'; // Import Axios
 import userIcon from '../../src/assets/person.png'
 import passwordIcon from '../../src/assets/password.png'
-import nature from '../../src/assets/nature.jpg'
+import nature from '../../src/assets/nature-01.jpg'
 
 function LogIn({ onLogin }) {
 
@@ -25,7 +25,7 @@ function LogIn({ onLogin }) {
     const handleSubmit = async (event) => {
         event.preventDefault();
         console.log(process.env.REACT_APP_USER_SERVICE_URL)
-        axios.post(`http://proxy-service/users/login`, {username, password})
+        axios.post(`/users/login`, {username, password})
             .then((res)=>{
                     console.log(res.data);
                     console.log()
