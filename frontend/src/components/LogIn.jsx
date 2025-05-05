@@ -6,7 +6,7 @@ import './LogIn.css'
 import axios from 'axios'; // Import Axios
 import userIcon from '../../src/assets/person.png'
 import passwordIcon from '../../src/assets/password.png'
-import nature from '../../src/assets/nature.jpg'
+import nature from '../../src/assets/nature-02.jpg'
 
 function LogIn({ onLogin }) {
 

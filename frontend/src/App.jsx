@@ -5,7 +5,7 @@ import { useState } from 'react'
 //import reactLogo from './assets/react.svg'
 //import viteLogo from '/vite.svg'
 import './App.css'
-import nature from './assets/nature.jpg'
+import nature from './assets/nature-02.jpg'
 
 import {
     BrowserRouter as Router,
