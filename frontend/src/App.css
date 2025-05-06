@@ -40,3 +40,48 @@
 .read-the-docs {
   color: #888;
 }
+
+.nav-left {
+  position: fixed;
+  top: 50px;
+  left: 20px;
+  z-index: 1000;
+  padding: 10px;
+  border: 1px;
+  border-radius: 5px;
+}
+
+.nav-left li {
+  list-style: none;   /* No bullets */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-left li a {
+  display: block;          /* Full-width clickable */
+  text-align: left;        /* Align text to the left */
+  text-decoration: none;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  border-radius: 4px;
+  color: color-mix(in srgb,brown 70%,pink);;
+  transition: background-color 0.3s ease;
+}
+
+.nav-left li a:hover {
+  background-color: #e0e0e0;
+  color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+

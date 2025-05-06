@@ -30,7 +30,7 @@ function App() {
 
     return (
         <Router>
-            <nav>
+            <nav className="nav-left">
                 <ul>
                     <li>
                         <Link to="/">LogIn</Link>

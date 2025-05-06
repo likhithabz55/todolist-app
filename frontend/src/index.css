@@ -7,7 +7,8 @@
   color: rgba(255, 255, 255, 0.87);
   height : 100vh;
 
-  background-image : url("./assets/nature-02.jpg");
+  background-image : url("./assets/nature.jpg");
+  #background-image : url("./assets/nature-02.jpg");
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -67,4 +68,27 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+.nav-left {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 20px;
+    top: 50px;
+    list-style-type: none;
+}
+
+.nav-left li {
+    margin: 10px 0;
+}
+
+.nav-left a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+.nav-left a:hover {
+    color: blue;
 }
