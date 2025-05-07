@@ -7,6 +7,7 @@ import { useState } from 'react'
 import './App.css'
 //import nature from './assets/nature-02.jpg'
 //testing with new bg image
+//changing background image to green
 import {
     BrowserRouter as Router,
     Routes,
